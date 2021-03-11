@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        /*
+        id: 100점
+        class: 10점
+        elem: 1점
+        */
+        .note.special{
+            color: pink;
+        }
+        h1.special{
+            color: red;
+        }
+        .special{
+            color: blue;
+        }
+        .note{
+            color: yellow;
+        }
+        #header1{
+            color: gray;
+        }
+        /* 같은 점수일땐 아래 우선 */
+    </style>
+</head>
+<body>
+    <h1 class="note">Lorem ipsum dolor sit amet consectetur.</h1>
+    <h1 class="note special">Sint doloremque minima dolore facere in.</h1>
+    <h1 class="note special">Dolorem ut nostrum ullam in deleniti.</h1>
+    <h1 id="header1">Repellendus dolores dicta nesciunt distinctio esse?</h1>
+    <h1>Non temporibus dignissimos illum aliquid officiis!</h1>
+</body>
+</html>
