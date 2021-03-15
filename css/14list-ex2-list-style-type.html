@@ -2,8 +2,10 @@
 <html>
 <head>
 <style>
+    
     .ol1{
         list-style-type: upper-alpha;
+
     }
     .ol2{
         list-style-type: upper-roman;
@@ -38,9 +40,40 @@
     }
     h2:hover + .ol2 {
         display: block;}
+    .ol3{display:none}
+    h3:hover + .ol3{
+        display: block;
+    }
+    .ol4{
+        display:none;
+    }
+    h4:hover + .ol4{
+        display:block;
+    }
+    .ul1 {
+        display: none;
+    }
+    h1:hover + .ul1 {
+        display: block;}
+        .ul2 {
+        display: none;
+    }
+    h1:hover + .ul2 {
+        display: block;}
+        .ul3 {
+        display: none;
+    }
+    h1:hover + .ul3 {
+        display: block;}
+        .ul4 {
+        display: none;
+    }
+    h1:hover + .ul4 {
+        display: block;}
 </style>
 </head>
 <body>
+  
 <h1>upper-alpha</h1>
     <!-- ol*4.ol$>li*4>lorem -->
 <ol class="ol1">
@@ -56,12 +89,14 @@
     <li>Ipsa, praesentium voluptates?</li>
     <li>Minus, corrupti consequuntur.</li>
 </ol>
+<h3>lower-alpha</h3>
 <ol class="ol3">
     <li>Lorem, ipsum dolor.</li>
     <li>Dolor, tempore illum!</li>
     <li>Natus, vero vitae.</li>
     <li>Inventore, quisquam facilis.</li>
 </ol>
+<h4>hiragana</h4>
 <ol class="ol4">
     <li>Lorem, ipsum dolor.</li>
     <li>Soluta, sunt minus.</li>
@@ -70,24 +105,28 @@
 </ol>
 
 <hr>
+<h1>disc</h1>
 <ul class="ul1">
     <li>Lorem ipsum dolor sit.</li>
     <li>At hic laborum ducimus?</li>
     <li>Voluptas delectus commodi voluptates.</li>
     <li>Iure consectetur nobis deserunt.</li>
 </ul>
+<h1>square</h1>
 <ul class="ul2">
     <li>Lorem ipsum dolor sit.</li>
     <li>Culpa quo hic et!</li>
     <li>Quibusdam consectetur nam voluptatibus?</li>
     <li>Ullam unde ad veritatis!</li>
 </ul>
+<h1>none</h1>
 <ul class="ul3">
     <li>Lorem ipsum dolor sit.</li>
     <li>Eligendi beatae maxime velit.</li>
     <li>Voluptatum distinctio dolorem doloribus.</li>
     <li>Est magnam quae praesentium!</li>
 </ul>
+<h1>unse</h1>
 <ul class="ul4">
     <li>Lorem ipsum dolor sit.</li>
     <li>Cum nostrum sapiente sunt!</li>
