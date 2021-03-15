@@ -26,9 +26,22 @@
     .ul4{
         list-style-type: unset;
     }
+
+    .ol1 {
+        display: none;
+    }
+    h1:hover + .ol1 {
+        display: block;}
+    
+        .ol2 {
+        display: none;
+    }
+    h2:hover + .ol2 {
+        display: block;}
 </style>
 </head>
 <body>
+<h1>upper-alpha</h1>
     <!-- ol*4.ol$>li*4>lorem -->
 <ol class="ol1">
     <li>Lorem, ipsum dolor.</li>
@@ -36,6 +49,7 @@
     <li>Iure, repellat impedit!</li>
     <li>Iusto, velit accusantium.</li>
 </ol>
+<h2>upper-roman</h2>
 <ol class="ol2">
     <li>Lorem, ipsum dolor.</li>
     <li>Harum, suscipit natus?</li>
