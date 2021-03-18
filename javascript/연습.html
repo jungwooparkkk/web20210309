@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<style>
+    body{
+        background-color: gray;
+    }
+    .main {
+        padding: 0px;
+
+    }
+    .main > li {
+        box-sizing: border-box;
+        width: 200px;
+        height: 100px;
+        border: 5px solid white;
+        position: relative;
+        background-color: white;
+    }
+    .tab {
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+        top: -5px;
+        left: 195px;
+        list-style-type: none;
+        display: none;
+    }
+    .tab > li {
+        box-sizing: border-box;
+        width: 200px;
+        height: 100px;
+        border: 5px solid gainsboro;
+        background-color: gainsboro;
+    }
+    .main>li:hover>.tab {
+        display: block;
+    }
+</style>
+</head>
+<body>
+
+<ul class="main">
+    <li>Tab One
+
+        <ul class="tab">
+            <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
+    </li>
+    <li>Tab Two
+        <ul class="tab">
+            <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
+    </li>
+    <li>Tab Three
+        <ul class="tab">
+            <li>Lorem ipsum dolor sit amet.</li>>
+        </ul>
+    </li>
+    <li>Tab Four
+        <ul class="tab">
+            <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
+    </li>
+    <li>Libero.
+        <ul class="tab">
+            <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
+    </li>
+</ul>
+
+</body>
+</html>
