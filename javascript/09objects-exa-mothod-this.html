@@ -8,16 +8,16 @@
 <body>
 <script>
     function start(){
-        console.log(f.name + "가 출발합니다.");
+        console.log(this.name + "가 출발합니다.");
     }
     var kar = {
         name: "fiat",
         start: start       
         };
     var car = {
-        nam: "volvo",
+        name: "volvo",
         start: start
-    }
+    };
     kar.start();
 
     car.start();
