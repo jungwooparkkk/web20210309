@@ -14,9 +14,12 @@
 <script>
     function add() {
         var text = document.querySelector("input").value;
+        text = text.trim();
         var ul = document.getElementById("result");
-        ul.innerHTML += "<li>" + text + "</li>"
-
+        //if (text != "")
+        if (text){
+            ul.innerHTML += "<li>" + text + "</li>"
+        }
     }
 
 </script>
