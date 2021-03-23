@@ -6,22 +6,106 @@
 </style>
 </head>
 <body>
+  <ul>
+    <li><a href="#" class="btn1" onclick="opentab1()">one</a></li>
+    <li><a href="#" class="btn2" onclick="opentab2()">Two</a></li>
+    <li><a href="#" class="btn3" onclick="opentab3()">Three</a></li>
+    <li><a href="#" class="btn4" onclick="opentab4()">Four</a></li>
+  </ul>
+  <div class="content">
+    <div class="tab1">1</div>
+    <div class="tab2">2</div>
+    <div class="tab3">3</div>
+    <div class="tab4">4</div>
+  </div>
+<!-- 
+    <p onclick="para1()">One</p>
+    <p onclick="para2()">Two</p>
+    <p onclick="para3()">Three</p>
+    <p onclick="para4()">Four</p>
 
-    <button onclick="para1">One</button>
-    <button onclick="para2">Two</button>
-    <button onclick="para3">Three</button>
-    <button onclick="para4">Four</button>
 
-
-    <div class="menu1">Lorem ipsum dolor sit.</div>
-    <div class="menu2">Lorem ipsum dolor sit amet.</div>
-    <div class="menu3">Lorem ipsum dolor sit amet consectetur.</div>
-    <div class="menu4">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
-
+    <div id="menu1"></div>
+    <div id="menu2"></div>
+    <div id="menu3"></div>
+    <div id="menu4"></div> -->
+<!-- 
     <script>
-        function para1(menu1) {
-          var menu =  document.getElementsByClassName(".menu1").value;
+        function para1() {
+          var x = document.querySelector("p").value;
+          x = document.getElementById("menu1").innerHTML = "lorem";
         }
-    </script>
+        function para2() {
+          var x = document.querySelector("p").value;
+          x = document.getElementById("menu2").innerHTML = "lorem2";
+        }
+        function para3() {
+          var x = document.querySelector("p").value;
+          x = document.getElementById("menu3").innerHTML = "lorem2";
+        }
+        function para4() {
+          var x = document.querySelector("p").value;
+          x = document.getElementById("menu4").innerHTML = "lorem2";
+        }
+    </script> -->
 </body>
+<style>
+  ul::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  li {
+    float: left;
+    list-style: none;
+    margin-right: 10px;
+  }
+  .tab1,.tab2,.tab3,.tab4  {
+    display: none;
+  }
+  .tab1.active,.tab2.active,.tab3.active,.tab4.active {
+    display: block;
+  }
+</style>
+<script>
+  // 1. 클릭하면 active 클래스 추가
+  // 2. 다른 클래스 active 클래스 빼기
+  var btn1 = document.getElementsByClassName('btn1');
+  var btn2 = document.getElementsByClassName('btn2');
+  var btn3 = document.getElementsByClassName('btn3');
+  var btn4 = document.getElementsByClassName('btn4');
+
+  var tab1 = document.querySelector('.tab1');
+  var tab2 = document.querySelector('.tab2');
+  var tab3 = document.querySelector('.tab3');
+  var tab4 = document.querySelector('.tab4');
+
+  function opentab1 () {
+    tab1.classList.add('active');
+    tab2.classList.remove('active');
+    tab3.classList.remove('active');
+    tab4.classList.remove('active');
+  }
+
+  function opentab2 () {
+    tab1.classList.remove('active');
+    tab2.classList.add('active');
+    tab3.classList.remove('active');
+    tab4.classList.remove('active');
+  }
+
+  function opentab3 () {
+    tab1.classList.remove('active');
+    tab2.classList.remove('active');
+    tab3.classList.add('active');
+    tab4.classList.remove('active');
+  }
+
+  function opentab4 () {
+    tab1.classList.remove('active');
+    tab2.classList.remove('active');
+    tab3.classList.remove('active');
+    tab4.classList.add('active');
+  }
+</script>
 </html>
