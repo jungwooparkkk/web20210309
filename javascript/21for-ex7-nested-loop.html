@@ -13,6 +13,7 @@
 <body>
     <div id="result"></div>
     <hr>
+    <!-- #result$@2*3 -->
     <div id="result2"></div>
     <hr>
     <div id="result3"></div>
@@ -28,33 +29,66 @@
         }
         document.getElementById("result").innerHTML = txt;
 
-        var txt2 = "";
-        for (var i = 4; i > -1; i--) {
-            for (var j = 0; j <= i; j++) {
-                txt2 += "*"
-            }
-            txt2 += "<br>";
-        }
-        document.getElementById("result2").innerHTML = txt2;
+        /*
+        result2
+        *****
+        ****
+        ***
+        **
+        *
+        */
+        txt = "";
 
-        var txt3 = "";
-        for (var i = 4; i > -1; i--) {
-            for (var j = 0; j <= i; j++) {
-                txt3 += "*"
+        for (i = 0; i < 5; i++) {
+            for (j = 5; j > i; j--) {
+                txt += "*";
             }
-            txt3 += "<br>";
+            txt += "<br>";
         }
-        document.getElementById("result3").innerHTML = txt3;
+        document.getElementById("result2").innerHTML = txt;
 
+        /*
+        
+        result3
+        *****
+         ****
+          ***
+           ** 
+            *
+        */
+        txt = "";
 
-        var txt4 = "";
-        for (var i = 0; i < 5; i++) {
-            for (var j = 0; j <= i; j++) {
-                txt4 += "*"
+        for (i = 0; i < 5; i++) {
+            for (var k = 0; k < i; k++) {
+                txt += "&nbsp;";
             }
-            txt4 += "<br>";
+
+            for (j = 5; j > i; j--) {
+                txt += "*";
+            }
+            txt += "<br>";
         }
-        document.getElementById("result4").innerHTML = txt4;
+        document.getElementById("result3").innerHTML = txt;
+/*
+        result4
+            *
+           **
+          ***
+         ****
+        *****
+        
+        */
+        txt = "";
+        for (i = 0; i < 5; i++) {
+            for (k = 0; k < (4-i); k++) {
+                txt += "&nbsp;";
+            }
+            for (j = 0; j <= i; j++) {
+                txt += "*"
+            }
+            txt += "<br>";
+        }
+        document.getElementById("result4").innerHTML = txt;
     </script>
 </body>
 
